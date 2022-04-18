@@ -1,0 +1,86 @@
+@import 'parts.scss';
+
+.book {
+  .main-text {
+    &::before {
+      content: '05';
+    }
+  }
+  &-container {
+    position: relative;
+    background: $white;
+    width: 100vw;
+    left: 50%;
+    transform: $center;
+    padding: 2rem 0;
+    &-inner {
+      display: flex;
+      justify-content: center;
+      gap: 0 10rem;
+      &-img {
+        width: 20%;
+        margin-top: 2rem;
+      }
+      &-text {
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-weight: bold;
+          &:not(:nth-of-type(1)) {
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+  }
+  &-selection {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    &-inner {
+      width: 25%;
+      opacity: 0;
+      transition: 1s;
+      transform: translateY(20%);
+      &.show {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+      span,
+      img {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        &:not(span) {
+          margin-top: 2rem;
+          box-shadow: 5px 5px 5px 5px;
+        }
+      }
+
+      .bookName {
+        margin-top: 1rem;
+        font-size: 14px;
+        position: relative;
+        font-weight: bold;
+        &::after {
+          content: '';
+          position: absolute;
+          background: $red;
+          width: 60%;
+          height: 40%;
+          bottom: 0%;
+          left: 50%;
+          transform: $center;
+          opacity: 0.8;
+          z-index: -1;
+        }
+      }
+      .bookUser {
+        font-size: 0.9rem;
+        margin-top: 0.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,343 @@
+@import 'parts.scss';
+
+@media screen and (max-width: 480px) {
+  .main-text {
+    font-size: 33px;
+    // margin-top: 10rem;
+    margin: 4rem auto 2rem auto;
+    &::after {
+      width: 100%;
+    }
+    &::before {
+      top: -60%;
+    }
+    &:not(.mediaText) {
+      margin-top: 13rem;
+    }
+  }
+  .sub-text {
+    left: 50%;
+    transform: $center;
+    margin: 1rem 0;
+    font-size: 18px;
+  }
+  .bar {
+    height: 80px;
+  }
+  .border {
+    animation: arrowMedia infinite 1.5s;
+    margin: 3rem 0;
+  }
+  .border-none {
+    display: none;
+  }
+  .header {
+    svg {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .header-container {
+      padding: 0 10px;
+      p {
+        // width: 80%;
+        // margin: 0 auto;
+        font-size: 13px;
+        text-align: center;
+        padding: 0 0 20px 0;
+        white-space: nowrap;
+      }
+      h2 {
+        font-size: large;
+        margin: 10px 30px 0 0;
+      }
+    }
+  }
+  .headerAnimation {
+    .headerAnimation-box {
+      display: none;
+    }
+    .headerAnimation-sns {
+      padding: 0 0 5px 5px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      width: 60%;
+      border-radius: 5px;
+      display: flex;
+      top: 2%;
+      left: 2%;
+      p {
+        font-size: 8px;
+        writing-mode: horizontal-tb;
+        padding: 13px 70px 0 0;
+        &::after {
+          content: none;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          border-bottom: 1px solid $black;
+          width: 50px;
+          right: 10%;
+          bottom: 40%;
+        }
+      }
+      a {
+        text-align: center;
+        margin: 0;
+        padding: 0px 5px;
+        font-size: 8px;
+        font-weight: 600;
+        img {
+          width: 20px;
+          height: 20px;
+          margin: 3px auto 0 auto;
+        }
+        &:nth-of-type(3) {
+          border: none;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .profile {
+    .profile-container-name {
+      font-size: 40px;
+      left: 50%;
+      transform: $center;
+      &::after {
+        width: 110%;
+        left: 50%;
+        transform: $center;
+      }
+    }
+    .profile-container-alphabet {
+      text-align: center;
+    }
+    .profile-container-text {
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+  .skill {
+    display: inline-block;
+    &-container {
+      position: relative;
+      &-inner {
+        width: 100%;
+        margin: 40px 0;
+        &:nth-of-type(4) {
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-size: 15px;
+          margin: 10px auto 10px auto;
+          white-space: nowrap;
+        }
+        p {
+          width: 100%;
+          padding: 10px;
+          font-size: 0.9em;
+        }
+        .sub-title {
+          padding: 5px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .work {
+    .work-inner-text {
+      width: 90%;
+      font-size: 11px;
+      p {
+        width: 90%;
+        margin: 0 auto;
+        line-height: 1.5;
+      }
+    }
+    .work-container {
+      width: 100vw;
+      left: 50%;
+      transform: $center;
+      padding: 2rem 0 8rem 0;
+      align-items: flex-start;
+      gap: 4rem 4rem;
+      overflow: hidden;
+      &-img {
+        width: 30%;
+        overflow: visible;
+        position: relative;
+        &:hover {
+          pointer-events: none;
+          .work-container-img-text {
+            pointer-events: none;
+          }
+        }
+        &:not(.textMedia) {
+          margin-top: 100px;
+        }
+        &-text {
+          top: 0px;
+          left: 0px;
+          bottom: 100px;
+          transition: none;
+          z-index: -1;
+          background: none;
+          width: 100%;
+          .box {
+            margin-top: 10px;
+            width: 100%;
+            .textTop {
+              margin-top: 100px;
+            }
+
+            p {
+              font-weight: bold;
+              transform: translate(60px, 100px);
+              font-size: 10px;
+              text-align: left;
+              width: 110%;
+              margin: 0 auto;
+              white-space: normal;
+            }
+          }
+          .size {
+            color: #333;
+            padding-top: 10px;
+            white-space: normal;
+            font-size: 5px;
+          }
+          h1 {
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            font-size: 10px;
+            margin: 0;
+            writing-mode: vertical-rl;
+            position: absolute;
+            letter-spacing: 2px;
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hobby {
+    &-container {
+      padding-bottom: 20px;
+      img {
+        left: 50%;
+        transform: $center;
+        width: 60%;
+        bottom: 13%;
+      }
+      display: block;
+      &-text {
+        padding-bottom: 50px;
+        p {
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+      &-img {
+        padding: 0 20px;
+        .text {
+          margin-top: 140px;
+          h2 {
+            text-align: center;
+          }
+        }
+        .icon {
+          flex-wrap: nowrap;
+          justify-content: space-around;
+          p {
+            font-size: 12px;
+            white-space: nowrap;
+            width: 100%;
+            padding-top: 5px;
+            &::before {
+              padding-right: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .book {
+    &-container {
+      &-inner {
+        display: block;
+        position: relative;
+        &-img {
+          position: absolute;
+          margin-top: 1rem;
+          left: 15%;
+          top: -10%;
+        }
+        &-text {
+          h1 {
+            text-align: center;
+            font-size: 30px;
+          }
+          p {
+            font-size: 10px;
+            text-align: center;
+          }
+          .sub-text {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    &-selection {
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0px 30px;
+      margin-top: 30px;
+      &-inner {
+        width: 45%;
+        img {
+          object-fit: cover;
+        }
+        .bookName {
+          font-size: 13px;
+          white-space: nowrap;
+          &::after {
+            width: 100%;
+          }
+        }
+        .bookUser {
+          font-size: 11px;
+          white-space: nowrap;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .copy {
+    margin-top: 30px;
+  }
+  .footer {
+    // padding-bottom: 20px;
+    &-text {
+      font-size: 15px;
+      left: 33%;
+      top: 20%;
+      transform: $center;
+      margin-top: 5px;
+      padding: 5px 10px;
+    }
+    &-container {
+      margin: 0 auto;
+      padding-bottom: 30px;
+      span {
+        font-size: 12px;
+        width: 90%;
+        padding-top: 5px;
+      }
+    }
+  }
+}

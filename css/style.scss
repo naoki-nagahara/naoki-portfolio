@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Vollkorn&display=swap');
+@import 'animation.scss';
+@import 'parts.scss';
+@import 'header.scss';
+@import 'profile.scss';
+@import 'skill.scss';
+@import 'work.scss';
+@import 'hobby.scss';
+@import 'book.scss';
+@import 'footer.scss';
+@import 'media.scss';
+
+body {
+  background: #f9f6e7;
+  font-family: 'Noto Sans JP', sans-serif;
+
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

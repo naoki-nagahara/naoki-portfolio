@@ -1,0 +1,51 @@
+@import 'parts.scss';
+
+.footer {
+  width: 100vw;
+  background: $red;
+  transform: $center;
+  left: 50%;
+  position: relative;
+  // padding-bottom: 50px;
+  &-text {
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    top: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 25px;
+    background: $white;
+  }
+  &-container {
+    width: 50%;
+    margin: 0px auto 0 auto;
+    padding-top: 70px;
+    span {
+      color: $white;
+      display: block;
+      padding-top: 20px;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 5px;
+    }
+    .email {
+      position: relative;
+      &::before {
+        content: '\f0e0';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 800;
+        padding-right: 1rem;
+      }
+    }
+    .tell {
+      position: relative;
+      &::before {
+        content: '\f095';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 800;
+        padding-right: 1rem;
+      }
+    }
+  }
+}

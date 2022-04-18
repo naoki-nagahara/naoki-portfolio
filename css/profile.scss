@@ -1,0 +1,47 @@
+@import 'parts.scss';
+
+.profile {
+  .main-text {
+    &::before {
+      content: '01';
+    }
+  }
+  &-container {
+    position: relative;
+    &-mask {
+      width: 100vw;
+      height: 60%;
+      position: absolute;
+      background: $white;
+      z-index: -1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.8;
+    }
+    &-name {
+      font-size: 60px;
+      display: inline-block;
+      letter-spacing: 10px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 130%;
+        border-bottom: $red 2px solid;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    &-alphabet {
+      letter-spacing: 10px;
+      margin: 1rem 0;
+      color: #aaa;
+    }
+    &-text {
+      font-weight: bold;
+      width: 50%;
+      line-height: 2;
+    }
+  }
+}
